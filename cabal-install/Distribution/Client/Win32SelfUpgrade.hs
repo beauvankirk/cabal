@@ -45,6 +45,7 @@ module Distribution.Client.Win32SelfUpgrade (
 #ifdef mingw32_HOST_OS
 
 import qualified System.Win32 as Win32
+import qualified System.Win32.File as Win32File
 import System.Win32 (DWORD, BOOL, HANDLE, LPCTSTR)
 import Foreign.Ptr (Ptr, nullPtr)
 import System.Process (runProcess)
@@ -138,7 +139,7 @@ deleteOldExeFile verbosity oldPID tmpPath = do
      ++ show oldPID ++ " at path " ++ tmpPath
 
   log $ "getting handle of parent process " ++ show oldPID
-  oldPHANDLE <- Win32.openProcess Win32.sYNCHORNIZE False (fromIntegral oldPID)
+  oldPHANDLE <- Win32.openProcess Win32.sYNCHRONIZE False (fromIntegral oldPID)
 
   log $ "synchronising with parent"
   event <- openEvent syncEventName
