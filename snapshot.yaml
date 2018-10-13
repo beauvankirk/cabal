@@ -1,4 +1,4 @@
-resolver: nightly-2018-10-03
+resolver: nightly-2018-10-13
 name: snapshot-for-ghc-8.6.1
 
 packages:
@@ -8,8 +8,8 @@ packages:
 # - HTTP-4000.3.12
 - cryptohash-sha256-0.11.101.0
 - hackage-security-0.5.3.0
-- git: https://github.com/beauvankirk/HTTP
-  commit: 0cde5812516e5deb507685ebfb1239009d36e5b8
+# - git: https://github.com/beauvankirk/HTTP
+#   commit: 0cde5812516e5deb507685ebfb1239009d36e5b8
 
     # - pretty-show-1.6.16
 # - git: https://github.com/DanielG/cabal-helper.git
@@ -19,15 +19,15 @@ packages:
 # - unliftio-0.2.8.0
 # - brittany-0.11.0.0
 # - cabal-plan-0.4.0.0
-- pretty-show-1.8.2
+# - pretty-show-1.8.2
 - ed25519-0.0.5.0
 # - syz-0.2.0.0
 
 drop-packages:
 # - Cabal
 # - cabal-install
-- cabal-doctest
-- HTTP
+# - cabal-doctest
+# - HTTP
 # resolver: lts-11.19
 # name: snapshot-for-building-stack-with-ghc-8.2.2
 
